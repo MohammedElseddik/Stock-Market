@@ -1,13 +1,14 @@
-import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import getStocksData from '../../apis/stocksApi';
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+import getStocksData from "../../apis/stocksApi";
+import stocksEffectCleanData from "../effects/stocksEffects";
 
 export const fetchStocksData = createAsyncThunk(
-  'stocks/fetchStocksData',
-  getStocksData,
+  "stocks/fetchStocksData",
+  getStocksData
 );
 
 const stocksSlice = createSlice({
-  name: 'stocks',
+  name: "stocks",
 
   initialState: {
     stocksData: [],
@@ -23,11 +24,11 @@ const stocksSlice = createSlice({
     }),
 
     [fetchStocksData.fulfilled]: (state, action) => {
-      console.log(action);
+      console.log(action.payload);
       return {
         ...state,
         isLoading: false,
-        stocksData: action.payload,
+        stocksData: stocksEffectCleanData(action),
       };
     },
 
