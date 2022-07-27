@@ -1,14 +1,14 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import getStocksData from "../../apis/stocksApi";
-import stocksEffectCleanData from "../effects/stocksEffects";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import getStocksData from '../../apis/stocksApi';
+import stocksEffectCleanData from '../effects/stocksEffects';
 
 export const fetchStocksData = createAsyncThunk(
-  "stocks/fetchStocksData",
-  getStocksData
+  'stocks/fetchStocksData',
+  getStocksData,
 );
 
 const stocksSlice = createSlice({
-  name: "stocks",
+  name: 'stocks',
 
   initialState: {
     stocksData: [],
