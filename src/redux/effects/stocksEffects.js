@@ -1,12 +1,9 @@
-const stocksEffectCleanData = ({ payload }) => {
-  return payload.map((company) => {
-    return {
-      companyName: company.companyName,
-      ticker: company.ticker,
-      price: company.price,
-      changes: company.changes,
-    };
-  });
-};
+const stocksEffectCleanData = ({ payload }) =>
+  payload.map((companyStock) => ({
+    companyName: companyStock.companyName,
+    ticker: companyStock.ticker,
+    price: companyStock.price,
+    changes: companyStock.changes,
+  }));
 
 export default stocksEffectCleanData;
