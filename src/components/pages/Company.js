@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import CompanyDetails from '../CompanyDetailes';
 
-const CompanyInfo = () => {
+const Company = () => {
   const { companyInfoData } = useSelector((state) => state.companyInfo);
 
   console.log(companyInfoData);
@@ -15,4 +15,4 @@ const CompanyInfo = () => {
   );
 };
 
-export default CompanyInfo;
+export default Company;
