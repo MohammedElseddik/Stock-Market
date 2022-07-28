@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const stocksUrl = 'https://financialmodelingprep.com/api/v3/actives?apikey=61d3e77e74207aa24ad5a8c19e3746ab';
+const stocksUrl = 'https://financialmodelingprep.com/api/v3/actives?apikey=bee8e453e38b2613f8b2e141b1e6d8d8';
 
 const getStocksData = async () => {
   try {
