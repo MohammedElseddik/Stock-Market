@@ -1,6 +1,6 @@
 const stocksEffectCleanData = ({ payload }) => payload.map((companyStock) => ({
   companyName: companyStock.companyName,
-  ticker: companyStock.ticker,
+  symbol: companyStock.ticker,
   stockPrice: companyStock.price,
   changes: companyStock.changes,
 }));

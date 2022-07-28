@@ -1,30 +1,18 @@
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Stocks from './components/pages/Stocks';
-import CompanyInfo from './components/pages/Company';
-// import { fetchStocksData } from './redux/features/stocksSlice';
-import { fetchCompanyInfoData } from './redux/features/companyInfoSlice';
+import Company from './components/pages/Company';
 
 import './App.css';
 
 function App() {
-  const companyInfo = useSelector((state) => state.companyInfo);
-
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    if (companyInfo.status === 'idle') {
-      // dispatch(fetchStocksData());
-      dispatch(fetchCompanyInfoData('AAPL'));
-    }
-  }, []);
-
   return (
-    <div>
-      <Stocks />
-      <CompanyInfo />
-    </div>
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<Stocks />} />
+        <Route exact path="/details/:ticker" element={<Company />} />
+      </Routes>
+    </Router>
   );
 }
 
