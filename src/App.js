@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 
 import Stocks from './components/pages/Stocks';
 import { fetchStocksData } from './redux/features/stocksSlice';
-import { fetchCompanyInfoData } from './redux/features/companyInfoSlice';
+// import { fetchCompanyInfoData } from './redux/features/companyInfoSlice';
 
 import './App.css';
 
@@ -15,7 +15,7 @@ function App() {
   useEffect(() => {
     if (companyInfo.status === 'idle') {
       dispatch(fetchStocksData());
-      dispatch(fetchCompanyInfoData('AAPL'));
+      // dispatch(fetchCompanyInfoData('AAPL'));
     }
   }, []);
 
