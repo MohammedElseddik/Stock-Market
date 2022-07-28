@@ -1,10 +1,12 @@
+import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
 
 const CompanyDetails = ({ companyData }) => {
   const {
     image,
     companyName,
-    ticker,
+    symbol,
     StockPrice,
     marketCap,
     ceo,
@@ -17,7 +19,9 @@ const CompanyDetails = ({ companyData }) => {
 
   return (
     <div>
-      <button type="button">Back Home</button>
+      <Link to="/">
+        <button type="button">Back Home</button>
+      </Link>
       <div>
         <div>
           <img src={image} alt="company-logo" />
@@ -25,7 +29,7 @@ const CompanyDetails = ({ companyData }) => {
         <div>
           <ul>
             <li>{companyName}</li>
-            <li>{ticker}</li>
+            <li>{symbol}</li>
             <li>{StockPrice}</li>
             <li>{marketCap}</li>
             <li>{ceo}</li>
@@ -44,7 +48,7 @@ const CompanyDetails = ({ companyData }) => {
 CompanyDetails.propTypes = {
   companyData: PropTypes.shape({
     companyName: PropTypes.string.isRequired,
-    ticker: PropTypes.string.isRequired,
+    symbol: PropTypes.string.isRequired,
     changes: PropTypes.number.isRequired,
     StockPrice: PropTypes.number.isRequired,
     marketCap: PropTypes.number.isRequired,

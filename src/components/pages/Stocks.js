@@ -1,11 +1,22 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useState, useEffect } from 'react';
+
 import { v4 as uuidv4 } from 'uuid';
 
+import { fetchStocksData } from '../../redux/features/stocksSlice';
 import StockItem from '../StockItem';
 
 const Stocks = () => {
-  const { stocksData } = useSelector((state) => state.stocks);
+  const { stocksData, status } = useSelector((state) => state.stocks);
+
+  console.log(status === 'idle');
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchStocksData());
+    }
+  }, []);
 
   const [searchTerm, setSearchTerm] = useState('');
 
