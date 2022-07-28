@@ -20,7 +20,11 @@ const Stocks = () => {
   return (
     <div>
       <div>
-        <input type="text" onChange={onSearchStockHandler} />
+        <input
+          type="text"
+          onChange={onSearchStockHandler}
+          placeholder="search by company name"
+        />
       </div>
       <div>
         {filteredStocks.map((stock) => (
