@@ -6,6 +6,8 @@ import { v4 as uuidv4 } from 'uuid';
 import { fetchStocksData } from '../../redux/features/stocksSlice';
 import StockItem from '../StockItem';
 
+import styles from '../../styles/Stocks.module.css';
+
 const Stocks = () => {
   const { stocksData, status } = useSelector((state) => state.stocks);
 
@@ -29,8 +31,9 @@ const Stocks = () => {
 
   return (
     <div>
-      <div>
+      <div className={styles['search-input-container']}>
         <input
+          className={styles['search-input']}
           type="text"
           onChange={onSearchStockHandler}
           placeholder="search by company name"

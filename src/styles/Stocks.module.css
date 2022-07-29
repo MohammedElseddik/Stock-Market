@@ -1,0 +1,18 @@
+.search-input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 60%;
+  padding: 0.8rem;
+  margin: 1rem auto;
+  border-radius: 5px;
+}
+
+.search-input::placeholder {
+  color: rgb(101, 58, 219);
+  font-size: 1rem;
+  font-weight: 700;
+}
