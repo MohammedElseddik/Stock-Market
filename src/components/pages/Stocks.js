@@ -9,7 +9,6 @@ import StockItem from '../StockItem';
 const Stocks = () => {
   const { stocksData, status } = useSelector((state) => state.stocks);
 
-  console.log(status === 'idle');
   const dispatch = useDispatch();
 
   useEffect(() => {

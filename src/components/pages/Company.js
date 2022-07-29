@@ -10,11 +10,9 @@ import CompanyDetails from '../CompanyDetailes';
 const Company = () => {
   const { companyInfoData, status } = useSelector((state) => state.companyInfo);
 
-  console.log(status);
   const dispatch = useDispatch();
 
   const { ticker } = useParams();
-  console.log(ticker);
 
   useEffect(() => {
     dispatch(fetchCompanyInfoData(ticker));

@@ -1,10 +1,4 @@
-# Bookstore
-
-The Bookstore is a website that allows the user to
-
-- Display a list of books.
-- Add a book.
-- Remove a selected book.
+# Stock-Market
 
 ## Deployment
 
@@ -17,6 +11,7 @@ The Bookstore is a website that allows the user to
 - JavaScript
 - React JS
 - Redux
+- API
 
 ## Getting Started
 
@@ -26,12 +21,12 @@ To get a local copy up and running follow these simple example steps.
 
 To get a local copy up and running follow these simple steps.
 
-To setup the Awesome-books-Project, in the repo page:
+To setup Stock-market project, in the repo page:
 click on code (dropdown list) > Download as ZIP;
 or open terminal of path you want to install project and run this command <br>
 
 ```sh
-  git clone git@github.com:MohammedElseddik/bookstore.git
+  git clone git@github.com:MohammedElseddik/Stock-Market.git
 ```
 
 ## 🛠 Installation & Set Up to run the project locally
