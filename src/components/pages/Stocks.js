@@ -30,16 +30,16 @@ const Stocks = () => {
     : stocksData.filter((stock) => stock.companyName.toLowerCase().includes(searchTerm));
 
   return (
-    <div>
+    <div className={styles['main-container']}>
       <div className={styles['search-input-container']}>
         <input
           className={styles['search-input']}
           type="text"
           onChange={onSearchStockHandler}
-          placeholder="search by company name"
+          placeholder="Search by company name"
         />
       </div>
-      <div>
+      <div className={styles['stocks-container']}>
         {filteredStocks.map((stock) => (
           <StockItem key={uuidv4()} stocks={stock} />
         ))}

@@ -1,18 +1,56 @@
+body {
+  background-color: #4369b2;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.stocks-container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(50%, 1fr));
+}
+
+.stocks-container a {
+  color: white;
+  text-decoration: none;
+}
+
 .search-input-container {
-  width: 100%;
   display: flex;
   align-items: center;
 }
 
 .search-input {
-  width: 60%;
-  padding: 0.8rem;
+  width: 70%;
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
   margin: 1rem auto;
-  border-radius: 5px;
+  border-radius: 10px;
+  color: #4369b2;
 }
 
 .search-input::placeholder {
-  color: rgb(101, 58, 219);
-  font-size: 1rem;
-  font-weight: 700;
+  color: #4369b2;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 500px) {
+  .main-container {
+    padding: 5rem;
+  }
+
+  .search-input {
+    width: 60%;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    margin: 2rem auto;
+  }
+
+  .search-input::placeholder {
+    font-size: 1.3rem;
+  }
 }
