@@ -12,7 +12,6 @@
   align-items: center;
   justify-content: center;
   padding: 1rem;
-  border: 2px greenyellow solid;
 }
 
 .search-input {
@@ -27,11 +26,7 @@
   font-size: 1.2rem;
 }
 
-/*  */
-/*  */
-
 .stocks-container {
-  border: 2px solid red;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 1fr;

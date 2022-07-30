@@ -7,6 +7,7 @@ import { fetchStocksData } from '../../redux/features/stocksSlice';
 import StockItem from '../StockItem';
 
 import styles from '../../styles/Stocks.module.css';
+import Header from '../Header';
 
 const Stocks = () => {
   const { stocksData, status } = useSelector((state) => state.stocks);
@@ -30,21 +31,24 @@ const Stocks = () => {
     : stocksData.filter((stock) => stock.companyName.toLowerCase().includes(searchTerm));
 
   return (
-    <div className={styles['main-container']}>
-      <div className={styles['search-input-container']}>
-        <input
-          className={styles['search-input']}
-          type="text"
-          onChange={onSearchStockHandler}
-          placeholder="Search by company name"
-        />
+    <>
+      <Header />
+      <div className={styles['main-container']}>
+        <div className={styles['search-input-container']}>
+          <input
+            className={styles['search-input']}
+            type="text"
+            onChange={onSearchStockHandler}
+            placeholder="Search by company name"
+          />
+        </div>
+        <div className={styles['stocks-container']}>
+          {filteredStocks.map((stock) => (
+            <StockItem key={uuidv4()} stocks={stock} />
+          ))}
+        </div>
       </div>
-      <div className={styles['stocks-container']}>
-        {filteredStocks.map((stock) => (
-          <StockItem key={uuidv4()} stocks={stock} />
-        ))}
-      </div>
-    </div>
+    </>
   );
 };
 
