@@ -10,7 +10,6 @@ const CompanyDetails = ({ companyData }) => {
     companyName,
     symbol,
     StockPrice,
-    marketCap,
     ceo,
     website,
     description,
@@ -35,7 +34,6 @@ const CompanyDetails = ({ companyData }) => {
             <li>{companyName}</li>
             <li>{symbol}</li>
             <li>{StockPrice}</li>
-            <li>{marketCap}</li>
             <li>{ceo}</li>
             <li>{website}</li>
             <li>{description}</li>
