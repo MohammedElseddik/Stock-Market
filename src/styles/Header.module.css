@@ -1,0 +1,24 @@
+.nav-header {
+  background-color: #2d4573;
+  padding: 2rem;
+}
+
+.nav-bar {
+  font-size: 2rem;
+  color: wheat;
+  font-weight: 800;
+}
+
+.logo {
+  padding-left: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-header {
+    padding: 0.5rem;
+  }
+
+  .nav-bar {
+    font-size: 1.3rem;
+  }
+}
