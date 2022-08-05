@@ -7,7 +7,9 @@ import ArrowCircleRight from '../icons/ArrowCircleRight';
 import styles from '../styles/StockItem.module.css';
 
 const StockItem = ({ stocks }) => {
-  const { companyName, symbol, changes, stockPrice } = stocks;
+  const {
+    companyName, symbol, changes, stockPrice,
+  } = stocks;
 
   return (
     <div data-testid="companyItem" className={styles['stock-item']}>
@@ -15,7 +17,10 @@ const StockItem = ({ stocks }) => {
         <div className={styles['stock-item__header']}>
           <h1>{companyName}</h1>
           <div>
-            {symbol} -{'   '}
+            {symbol}
+            {' '}
+            -
+            {'   '}
             <span className={styles.green}>{`( ${changes} )`}</span>
           </div>
           <ArrowCircleRight />

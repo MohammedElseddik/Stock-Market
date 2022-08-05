@@ -1,18 +1,16 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from '../../redux/store/store';
 import Company from './Company';
 
-const MockedCompany = () => {
-  return (
-    <BrowserRouter>
-      <Provider store={store}>
-        <Company />
-      </Provider>
-    </BrowserRouter>
-  );
-};
+const MockedCompany = () => (
+  <BrowserRouter>
+    <Provider store={store}>
+      <Company />
+    </Provider>
+  </BrowserRouter>
+);
 
 describe('Compnay component', () => {
   test('test if the header company component rendered', async () => {

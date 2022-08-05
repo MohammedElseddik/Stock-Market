@@ -10,7 +10,7 @@ import CompanyDetails from '../CompanyDetailes';
 import styles from '../../styles/Company.module.css';
 
 const Company = () => {
-  const { companyInfoData, status } = useSelector((state) => state.companyInfo);
+  const { companyInfoData } = useSelector((state) => state.companyInfo);
 
   const dispatch = useDispatch();
 

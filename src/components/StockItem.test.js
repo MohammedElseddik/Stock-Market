@@ -1,14 +1,12 @@
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import StockItem from './StockItem';
 
-const MockedStockItems = () => {
-  return (
-    <BrowserRouter>
-      <StockItem stocks={{}} />
-    </BrowserRouter>
-  );
-};
+const MockedStockItems = () => (
+  <BrowserRouter>
+    <StockItem stocks={{}} />
+  </BrowserRouter>
+);
 
 describe('StockItem', () => {
   test('test if the items exist', () => {

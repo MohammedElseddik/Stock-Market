@@ -4,15 +4,13 @@ import { Provider } from 'react-redux';
 import store from '../../redux/store/store';
 import Stocks from './Stocks';
 
-const MockedStocks = () => {
-  return (
-    <BrowserRouter>
-      <Provider store={store}>
-        <Stocks />
-      </Provider>
-    </BrowserRouter>
-  );
-};
+const MockedStocks = () => (
+  <BrowserRouter>
+    <Provider store={store}>
+      <Stocks />
+    </Provider>
+  </BrowserRouter>
+);
 
 describe('stocks', () => {
   test('test search input', async () => {
