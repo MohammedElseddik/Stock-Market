@@ -1,5 +1,5 @@
 .main-container {
-  background-color: #4369b0;
+  background-color: #3367c8;
   padding: 4rem;
   display: flex;
   flex-direction: column;
@@ -35,8 +35,14 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .main-container {
+    padding: 0;
+  }
+
   .search-input {
     padding: 0.5rem;
+    margin: 1rem;
+    width: 90%;
   }
 
   .search-input::placeholder {
@@ -45,5 +51,7 @@
 
   .stocks-container {
     grid-template-columns: repeat(2, 1fr);
+    padding: 0;
+    gap: 0;
   }
 }

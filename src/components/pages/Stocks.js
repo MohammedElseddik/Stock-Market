@@ -42,11 +42,16 @@ const Stocks = () => {
             placeholder="Search by company name"
           />
         </div>
-        <div className={styles['stocks-container']}>
-          {filteredStocks.map((stock) => (
-            <StockItem key={uuidv4()} stocks={stock} />
+        <ul className={styles['stocks-container']}>
+          {filteredStocks.map((stock, index) => (
+            <StockItem
+              key={uuidv4()}
+              stocks={stock}
+              id={index}
+              dataLength={filteredStocks.length}
+            />
           ))}
-        </div>
+        </ul>
       </div>
     </>
   );

@@ -31,3 +31,10 @@
   right: 10px;
   text-align: right;
 }
+
+@media only screen and (max-width: 600px) {
+  .stock-item {
+    border: none;
+    border-radius: 0;
+  }
+}

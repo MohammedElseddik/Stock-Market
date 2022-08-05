@@ -12,3 +12,13 @@
 .logo {
   padding-left: 1rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .nav-header {
+    padding: 0.5rem;
+  }
+
+  .nav-bar {
+    font-size: 1.3rem;
+  }
+}
