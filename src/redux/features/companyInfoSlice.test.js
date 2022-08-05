@@ -1,5 +1,4 @@
-import companyInfoReducer from './companyInfoSlice';
-import { fetchCompanyInfoData } from './companyInfoSlice';
+import companyInfoReducer, { fetchCompanyInfoData } from './companyInfoSlice';
 
 describe('Test companyInfoSlice', () => {
   test('fetchCompanyInfoData.pending', () => {

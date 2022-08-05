@@ -31,14 +31,14 @@ const CompanyDetails = ({ companyData }) => {
         </div>
         <div className={styles['list-container']}>
           <ul className={styles['list-info']}>
-            <li>{companyName}</li>
+            <li data-testid="companyName">{companyName}</li>
             <li>{symbol}</li>
             <li>{StockPrice}</li>
             <li>{ceo}</li>
             <li>{website}</li>
             <li>{description}</li>
             <li>{address}</li>
-            <li>{changes.toFixed(2)}</li>
+            <li>{changes}</li>
             <li>{currency}</li>
           </ul>
         </div>

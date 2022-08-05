@@ -20,16 +20,11 @@ const Company = () => {
     dispatch(fetchCompanyInfoData(ticker));
   }, []);
 
-  if (status === 'loading') {
-    return <p>loading</p>;
-  }
-
-  if (status === 'failed') {
-    return <p>failed</p>;
-  }
-
   return (
-    <div className={styles['company-container']}>
+    <div
+      data-testid="company-container"
+      className={styles['company-container']}
+    >
       {companyInfoData.map((company) => (
         <CompanyDetails key={uuidv4} companyData={company} />
       ))}
