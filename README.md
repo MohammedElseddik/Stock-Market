@@ -1,5 +1,7 @@
 # Stock-Market
 
+A web application that provides you with the data about the most active trading stocks for the day.
+
 ## Deployment
 
 (Link will be provided after finishing the project)
@@ -65,6 +67,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
+- Original design idea by <a src='https://www.behance.net/sakwadesignstudio'>Nelson Sakwa</a>.
 - My coding partners
 - Hat tip to anyone whose code was used.
 - Microverse team.
