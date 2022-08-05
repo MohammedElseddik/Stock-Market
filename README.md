@@ -17,6 +17,10 @@ https://stocks-market-app.herokuapp.com/
 
 ## Getting Started
 
+## Video Presentation
+
+<a src='https://www.loom.com/share/5d4a63fddedd4b7989f860372951ff10'> Video presentation</a>
+
 To get a local copy up and running follow these simple example steps.
 
 ### Setup
