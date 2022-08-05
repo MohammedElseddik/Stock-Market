@@ -4,7 +4,7 @@ A web application that provides you with the data about the most active trading 
 
 ## Deployment
 
-(Link will be provided after finishing the project)
+https://stocks-market-app.herokuapp.com/
 
 ## Major Languages
 
