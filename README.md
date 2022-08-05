@@ -47,8 +47,8 @@ or open terminal of path you want to install project and run this command <br>
    
 ## 🛠 Run test
 
-- ```sh
-   npm test
+  ```sh
+  npm test
   ``
 
 the project will be opened in [http://localhost:3000] on the browser.
