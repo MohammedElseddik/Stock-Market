@@ -47,7 +47,7 @@ or open terminal of path you want to install project and run this command <br>
    
 ## 🛠 Run test
 
-- ```sh
+  ```sh
    npm test
   ```
 
